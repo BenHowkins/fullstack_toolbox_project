@@ -1,1 +1,1 @@
-web: node index.js
+web: gunicorn otaku_blog.wsgi
