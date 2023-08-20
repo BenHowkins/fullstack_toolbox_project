@@ -33,7 +33,7 @@ SECRET_KEY = 'os.environ.get("SECRET_KEY")'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'otaku-blog.herokuapp.com', 'localhost'
+    'otaku-blog.herokuapp.com', 'localhost',
     '8000-benhowkins-fullstack-too-1e2k7ay1o5.us2.codeanyapp.com'
 ]
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'django_summernote',
     'blog',
 ]
 
@@ -141,7 +142,7 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
-DEFAULT_FILE_STORAGE = 'cloudinary_storage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 
 # Default primary key field type
